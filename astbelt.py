@@ -1,19 +1,20 @@
+
 class A:             # ~~ASTEROID BELT~~
   w=0;a=4;t=2          # By u/Bombadil44
   def m(_):     # github.com/bombadil444
     _.x+=_.z;_.w+=1  # WASD=move P=shoot
     try:      # Don't Panic! Have Fun :D
-      for i in 0,1: p(_.x,_.w+i,"O"*4)
+      for i in 0,1: p(_.x,_.w+i,"💻"*4)
     except: o.remove(_)
   def __init__(_): _.x=r(t);_.z=r(-1,2)
 class Z: #                       OOOO 0
   def __init__(_): _.x=x+3;_.y=y#OOOO
   def m(_): #                        AA
-    _.y-=1;p(_.x,_.y,"0") #    OOOO <==>
+    _.y-=1;p(_.x,_.y,"🔥") #    OOOO <==>
     if _.y<=0: global m;m=0 #  OOOO  **
 from curses import*;from random import*
 z=initscr();r=randrange;q,t=z.getmaxyx()
-l=[" AA","<==>"," **"];d=a=m=n=0;y=q-9
+l=[" 🔺🔺","✈️✈️✈️"," 💥💥"];d=a=m=n=0;y=q-9
 def p(h,e,w): z.addstr(e,h,w)
 def k(e=100,w=1,l=0):
   if e in u: global d;global a;d=w;a=l
@@ -31,5 +32,5 @@ while 48 not in u:
     and g+e.t>y+2>=g and u.append(48))
     if (m and v<=m.x<v+e.a and g<=m.y<
      g+e.t): o.remove(e);m=0;n+=1000
-  p(10,0,"SCORE: %s"%(n));napms(50)
+  p(10,0,"SCORE: %s"%(n));napms(100)
 napms(5000);z.keypad(0);endwin()
